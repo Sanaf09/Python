@@ -1,0 +1,142 @@
+def fact(n):
+    '''Function to return factorial of a given number'''
+    if(type(n)==int):
+        f=1
+        for i in range(1,n+1):
+            f=f*i
+        return f
+    else:
+        return'Cannot find the factorial of non-integer value'
+
+def fibo(n):
+    '''Its a function which returns a list containing fibonacci series upto the entered value.
+    It accepts an integer value.'''
+    if(type(n)==int):
+        l=list()
+        l.append(0)
+        l.append(1)
+        while l[-1]+l[-2]<=n:
+            l.append(l[-1]+l[-2])
+        return l
+
+def checkPrime(n):
+    '''Its a function that checks whether the entered value is a prime integer or not. '''
+    for i in range(2,n//2+1):
+        if(n%i==0):
+            return False
+    return True
+
+def sumFibo(n):
+    l=fibo(n)
+    sum=0
+    for i in l:
+        sum+=i
+    return sum
+
+def countVowel(s):
+    count = 0
+    for i in s:
+        if i in 'aeiouAEIOU':
+            count+=1
+    return count
+
+def inpNum():
+    return(int(input('\tEnter a number : ')))
+
+def main():
+    while True:
+        print('\t\t\tMENU\n\t1. Factorial\n\t2. Fibonacci Series\n\t3. Summation of Fibonacci Series\n\t4. Primality Check\n\t5. Count Vowels\n\t6. Exit')
+        ch=int(input('\tEnter your choice : '))
+        if(ch==1):
+            n = inpNum()
+            print("\tFactorial of ",n," is ",fact(n))
+        elif(ch==2):
+            n = inpNum()
+            print('\tFibonacci series till ',n,' is ',fibo(n))
+        elif(ch==3):
+            n = inpNum()
+            print('\tSummation of fibonacci series upto',n,'is',sumFibo(n))
+        elif(ch==4):
+            n = inpNum()
+            print('\tIs',n,'prime : ',checkPrime(n))
+        elif(ch==5):
+            s = input('\tEnter a string : ')
+            print('\tNumber of vowels in',s,'are',countVowel(s))
+        elif(ch==6):
+            break
+        else:
+            print('\n\tEnter Valid choice !!!!!\n')
+
+if(__name__=='__main__'):
+    main()
+
+# Output-
+        #                 MENU
+        # 1. Factorial
+        # 2. Fibonacci Series
+        # 3. Summation of Fibonacci Series
+        # 4. Primality Check
+        # 5. Count Vowels
+        # 6. Exit
+        # Enter your choice : 1
+        # Enter a number : 5
+        # Factorial of  5  is  120
+        #                 MENU
+        # 1. Factorial
+        # 2. Fibonacci Series
+        # 3. Summation of Fibonacci Series
+        # 4. Primality Check
+        # 5. Count Vowels
+        # 6. Exit
+        # Enter your choice : 2
+        # Enter a number : 6
+        # Fibonacci series till  6  is  [0, 1, 1, 2, 3, 5]
+        #                 MENU
+        # 1. Factorial
+        # 2. Fibonacci Series
+        # 3. Summation of Fibonacci Series
+        # 4. Primality Check
+        # 5. Count Vowels
+        # 6. Exit
+        # Enter your choice : 3
+        # Enter a number : 6
+        # Summation of fibonacci series upto 6 is 12
+        #                 MENU
+        # 1. Factorial
+        # 2. Fibonacci Series
+        # 3. Summation of Fibonacci Series
+        # 4. Primality Check
+        # 5. Count Vowels
+        # 6. Exit
+        # Enter your choice : 4
+        # Enter a number : 5
+        # Is 5 prime :  True
+        #                 MENU
+        # 1. Factorial
+        # 2. Fibonacci Series
+        # 3. Summation of Fibonacci Series
+        # 4. Primality Check
+        # 5. Count Vowels
+        # 6. Exit
+        # Enter your choice : 5
+        # Enter a string : Sanaf
+        # Number of vowels in Sanaf are 2
+        #                 MENU
+        # 1. Factorial
+        # 2. Fibonacci Series
+        # 3. Summation of Fibonacci Series
+        # 4. Primality Check
+        # 5. Count Vowels
+        # 6. Exit
+        # Enter your choice : 7
+
+        # Enter Valid choice !!!!!
+
+        #                 MENU
+        # 1. Factorial
+        # 2. Fibonacci Series
+        # 3. Summation of Fibonacci Series
+        # 4. Primality Check
+        # 5. Count Vowels
+        # 6. Exit
+        # Enter your choice : 6
