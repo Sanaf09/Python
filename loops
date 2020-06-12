@@ -1,0 +1,33 @@
+def main():
+
+    #For Loop
+    
+    '''for loops are traditionally used when you have a block of code which you want to repeat a fixed number of times. The Python for statement iterates over the members of a sequence in order, executing the block each time.'''
+    n =int(input('Enter the Number : '))
+    f=1
+    for i in range(1,n+1):
+        f=f*i
+    print('Factorial of ',n,' is ',f)
+    a,b=0,1
+    c=a+b
+    print('Fibonacci Series till ',n,' : ',a,b,end=' ')
+    
+    
+    
+    
+    
+    #While loop
+    
+    '''While loops, like the ForLoop, are used for repeating sections of code - but unlike a for loop, the while loop will not run n times, but until a defined condition is no longer met.'''
+    while c<=n:
+        print(c,end=' ')
+        a,b=b,c
+        c=a+b
+    print('')
+
+if(__name__=='__main__'):
+    main()
+# OUTPUT-
+# Enter the Number : 5
+# Factorial of  5  is  120
+# Fibonacci Series till  5  :  0 1 1 2 3 5
